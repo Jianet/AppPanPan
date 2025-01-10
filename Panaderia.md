@@ -64,6 +64,12 @@ Por otro lado, las panaderías que no tienen un sistema de pedidos en línea lim
 ![ModeloRelacional](https://github.com/user-attachments/assets/38e2afe2-de81-469a-ae9a-4a4797cdd26e)
 
 
+## DESARROLLO DE PROYECTO
+![Inicio-Paginaprincipal](https://github.com/user-attachments/assets/702db12e-d728-4fb5-9e80-b61c5c0d2709)
+![Catalogo](https://github.com/user-attachments/assets/0e5ca4ba-5be8-4ce9-a3a8-4afd2869016e)
+![Contacto](https://github.com/user-attachments/assets/c6b31361-40f5-425e-82da-d76ce7324c35)
+
+
 
 
 
