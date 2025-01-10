@@ -1,61 +1,78 @@
-# AppPanPan
+# AppPanPan - Sistema de Gestión para Panadería
 
 ## Introducción
 
-**AppPanPan** es una aplicación web desarrollada en Django que busca digitalizar la gestión de una panadería. Su objetivo principal es optimizar las operaciones diarias, como el registro de productos, la gestión de inventarios, y la toma de pedidos, proporcionando una solución moderna y eficiente tanto para los administradores como para los clientes de la panadería.
+**Propósito y Objetivos**
 
-En la actualidad, muchas panaderías operan con métodos manuales o sistemas poco integrados, lo que puede dificultar el control de inventarios, retrasar la atención al cliente y limitar el crecimiento del negocio. AppPanPan aborda estas limitaciones ofreciendo una plataforma accesible, confiable y personalizable.
+El propósito de **AppPanPan** es ofrecer una plataforma web eficiente e intuitiva para la gestión integral de una panadería. Este sistema busca optimizar tanto la experiencia del cliente como los procesos operativos internos, permitiendo gestionar pedidos, inventarios y la producción de manera ágil y eficaz.
+
+### Objetivos específicos:
+1. **Automatizar el sistema de pedidos**: Facilitar que los clientes realicen pedidos en línea de manera rápida y sencilla.
+2. **Gestión de inventarios**: Monitorear y gestionar el stock de productos en tiempo real, con alertas para evitar faltantes.
+3. **Mejorar la comunicación interna**: Optimizar la comunicación entre empleados y clientes a través de notificaciones y el seguimiento de pedidos.
+4. **Optimizar procesos internos**: Automatizar la facturación y los procesos de producción, reduciendo el trabajo manual y el margen de error.
+5. **Análisis de ventas**: Ofrecer reportes detallados sobre las ventas, ayudando a la toma de decisiones estratégicas.
 
 ---
 
 ## Contexto del Problema
 
-El sector de la panadería es uno de los más tradicionales dentro de la industria alimentaria. Sin embargo, este sector enfrenta múltiples desafíos, entre ellos:
+Las panaderías enfrentan diversos desafíos operativos que afectan tanto su eficiencia como rentabilidad. La gestión manual de pedidos, inventarios y la falta de herramientas para el análisis de ventas dificultan la toma de decisiones informadas que optimicen sus operaciones. Además, la competencia está aumentando, lo que hace aún más necesario contar con una solución tecnológica que permita ofrecer un mejor servicio al cliente y agilizar los procesos internos.
 
-1. **Gestión manual de operaciones:** Muchas panaderías pequeñas y medianas aún dependen de métodos manuales para llevar el control de su inventario, lo que aumenta el riesgo de errores humanos.
-2. **Falta de digitalización:** La ausencia de herramientas tecnológicas limita la eficiencia operativa y puede afectar la experiencia del cliente.
-3. **Demanda de conveniencia:** Los clientes modernos valoran la conveniencia de realizar pedidos en línea, pero pocas panaderías cuentan con una solución que facilite este proceso.
-4. **Competencia creciente:** La proliferación de grandes cadenas y panaderías digitales plantea la necesidad de que los pequeños negocios adopten tecnologías innovadoras para mantenerse competitivos.
+Las panaderías tradicionales dependen de sistemas manuales que requieren tiempo y son propensos a errores, lo que impacta negativamente en la calidad del servicio y la eficiencia de las operaciones. En muchos casos, el manejo manual del inventario aumenta el riesgo de desabastecimiento o desperdicio de ingredientes.
 
-En respuesta a estos problemas, **AppPanPan** surge como una solución integral que permite digitalizar y optimizar las operaciones de las panaderías, mejorando la eficiencia del negocio y la satisfacción de los clientes.
+De acuerdo con la **Sociedad Internacional de Panadería**, hasta un 20% de las panaderías pequeñas y medianas pierden rentabilidad debido a la gestión ineficiente de su inventario.
+
+Por otro lado, las panaderías que no tienen un sistema de pedidos en línea limitan su alcance, perdiendo la oportunidad de atraer a clientes que prefieren realizar compras cómodamente desde sus dispositivos móviles. La digitalización en este sector es clave para mantenerse competitivo en un mercado cada vez más enfocado en la tecnología.
 
 ---
 
 ## Análisis de Requerimientos
 
 ### Requerimientos Funcionales
-1. **Gestión de productos:**
-   - Registrar, editar y eliminar productos disponibles en la panadería.
-   - Visualizar el catálogo completo de productos con precios y descripciones.
-   
-2. **Gestión de inventarios:**
-   - Actualizar automáticamente el inventario al realizar ventas.
-   - Alertar sobre niveles bajos de existencias.
 
-3. **Gestión de pedidos:**
-   - Permitir a los clientes realizar pedidos en línea.
-   - Generar un historial de pedidos por cliente.
-
-4. **Gestión de usuarios:**
-   - Autenticación y registro de usuarios (administradores y clientes).
-   - Perfiles diferenciados con funcionalidades específicas según el rol.
-
-5. **Reportes:**
-   - Generar reportes de ventas diarias, semanales y mensuales.
-   - Visualizar estadísticas de los productos más vendidos.
+1. **Gestión de usuarios**: El sistema debe permitir crear, editar y eliminar usuarios con roles específicos (clientes, empleados, administradores).
+2. **Sistema de pedidos**: Los clientes deben poder realizar pedidos en línea, seleccionar productos, añadir al carrito y proceder al pago.
+3. **Gestión de inventarios**: El sistema debe permitir seguir el estado del inventario en tiempo real, con alertas de bajo stock y opciones para añadir o editar productos.
+4. **Generación de facturas**: El sistema debe generar facturas automáticas después de completar un pedido, incluyendo los detalles del pedido y los impuestos.
+5. **Notificaciones**: Los usuarios deben recibir notificaciones sobre el estado de sus pedidos (confirmación, envío, entrega).
+6. **Reportes de ventas**: El sistema debe generar informes de ventas diarias, semanales y mensuales.
+7. **Administración de recetas**: El sistema debe permitir registrar y gestionar las recetas de los productos, detallando los ingredientes y cantidades necesarias.
 
 ### Requerimientos No Funcionales
-1. **Seguridad:**
-   - Proteger la información de usuarios y transacciones con mecanismos de cifrado.
-   
-2. **Escalabilidad:**
-   - Diseñar la aplicación para soportar un aumento en la cantidad de productos y usuarios.
 
-3. **Usabilidad:**
-   - Interfaz intuitiva y amigable para usuarios de distintos niveles de experiencia.
+1. **Seguridad**: Implementar un sistema de autenticación seguro y encriptación de datos sensibles.
+2. **Usabilidad**: La interfaz debe ser intuitiva, fácil de usar y responsive.
+3. **Escalabilidad**: El sistema debe ser escalable para soportar un aumento en la carga de usuarios y funcionalidades.
+4. **Disponibilidad**: El sistema debe estar disponible 24/7 con tiempos de inactividad mínimos para mantenimiento.
+5. **Compatibilidad**: Compatible con los principales navegadores web y dispositivos móviles.
 
-4. **Compatibilidad:**
-   - Garantizar que la aplicación funcione en diferentes dispositivos y navegadores.
+### Requerimientos Técnicos
 
-5. **Desempeño:**
-   - Responder rápidamente a las solicitudes de los usuarios, incluso con altas cargas.
+1. **Framework**: La aplicación será desarrollada usando **Django**, un framework de Python adecuado para la creación de aplicaciones web seguras y escalables.
+2. **Base de datos**: Se utilizará **SQLite** para el desarrollo inicial, con la posibilidad de migrar a **PostgreSQL** o **MySQL** en el futuro.
+3. **Frontend**: Se utilizarán tecnologías web como **HTML**, **CSS** y **JavaScript** para el desarrollo de la interfaz de usuario.
+4. **APIs**: El sistema debe integrarse con plataformas de pago como **PayPal** o **Stripe**.
+5. **Testing**: Implementar pruebas unitarias y de integración para asegurar la funcionalidad del sistema.
+
+---
+
+
+
+## MODELO RELACIONAL
+![ModeloRelacional(Django)](https://github.com/user-attachments/assets/d9db8b85-996a-4a24-9b68-204a71fa35eb)
+![ModeloRelacional](https://github.com/user-attachments/assets/38e2afe2-de81-469a-ae9a-4a4797cdd26e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
