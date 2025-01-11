@@ -1,0 +1,22 @@
+<!-- contacts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Panadería Vintage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="contacts.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class=\"contact\">\n            <h1>Contacto</h1>\n            <form action=\"#\" method=\"POST\">\n                <label for=\"name\">Nombre:</label>\n                <input type=\"text\" id=\"name\" name=\"name\" required>\n\n                <label for=\"email\">Correo Electrónico:</label>\n                <input type=\"email\" id=\"email\" name=\"email\" required>\n\n                <label for=\"order\">Tu pedido:</label>\n                <textarea id=\"order\" name=\"order\" rows=\"5\"></textarea>\n\n                <button type=\"submit\">Enviar</button>\n            </form>\n        </section>\n    </main>\n    <footer>\n        <p>&copy; 2025 Panadería Vintage. Todos los derechos reservados.</p>\n    </footer>\n</body>\n</html>
